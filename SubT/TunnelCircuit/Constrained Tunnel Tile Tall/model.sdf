@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="Constrained Tunnel Tile Tall">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://Constrained Tunnel Tile Tall/meshes/constrained_tall.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision_ground">
+        <geometry>
+          <box>
+            <size>5 20 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual_chainlink">
+        <geometry>
+          <mesh>
+            <uri>model://Constrained Tunnel Tile Tall/meshes/constrained_tall.dae</uri>
+            <submesh>
+              <name>Chainlink</name>
+              <center>false</center>
+            </submesh>
+            <scale>1.001 1.001 1.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <script>
+              <uri>model://Constrained Tunnel Tile Tall/materials/scripts</uri>
+              <uri>model://Constrained Tunnel Tile Tall/materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="visual_ground">
+        <geometry>
+          <mesh>
+            <uri>model://Constrained Tunnel Tile Tall/meshes/constrained_tall.dae</uri>
+            <submesh>
+              <name>Ground</name>
+              <center>false</center>
+            </submesh>
+            <scale>1.001 1.001 1.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <script>
+              <uri>model://Constrained Tunnel Tile Tall/materials/scripts</uri>
+              <uri>model://Constrained Tunnel Tile Tall/materials/textures</uri>
+              <name>TunnelTile/Ground_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="visual_wood">
+        <geometry>
+          <mesh>
+            <uri>model://Constrained Tunnel Tile Tall/meshes/constrained_tall.dae</uri>
+            <submesh>
+              <name>Wood</name>
+              <center>false</center>
+            </submesh>
+            <scale>1.001 1.001 1.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <script>
+              <uri>model://Constrained Tunnel Tile Tall/materials/scripts</uri>
+              <uri>model://Constrained Tunnel Tile Tall/materials/textures</uri>
+              <name>TunnelTile/Wood_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="visual_walls">
+        <geometry>
+          <mesh>
+            <uri>model://Constrained Tunnel Tile Tall/meshes/constrained_tall.dae</uri>
+            <submesh>
+              <name>Walls</name>
+              <center>false</center>
+            </submesh>
+            <scale>1.001 1.001 1.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <script>
+              <uri>model://Constrained Tunnel Tile Tall/materials/scripts</uri>
+              <uri>model://Constrained Tunnel Tile Tall/materials/textures</uri>
+              <name>TunnelTile/Walls_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="visual_dirt_wall">
+        <geometry>
+          <mesh>
+            <uri>model://Constrained Tunnel Tile Tall/meshes/constrained_tall.dae</uri>
+            <submesh>
+              <name>DirtWall</name>
+              <center>false</center>
+            </submesh>
+            <scale>1.001 1.001 1.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <script>
+              <uri>model://Constrained Tunnel Tile Tall/materials/scripts</uri>
+              <uri>model://Constrained Tunnel Tile Tall/materials/textures</uri>
+              <name>TunnelTile/ConstrainedWall_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
