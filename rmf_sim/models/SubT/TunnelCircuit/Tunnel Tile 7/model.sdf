@@ -1,0 +1,176 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="Tunnel Tile 7">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://Tunnel Tile 7/meshes/Tunnel Tile 7.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collision_ground_1">
+        <pose>0 6.14028 5 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>6.19538 7.71943 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="collision_ground_2">
+        <pose>0 2.28057 2.5 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>6.19538 0.001 5</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="collision_ground_3">
+        <pose>0 -3.8572 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>6.19538 12.2806 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="collision_ground_4">
+        <pose>0 -2.42079 6.38525 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>6.19538 0.001 5.69769</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="collision_ground_5">
+        <pose>-2.83306 0.079873 4.58439 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.001 5.1333 9.16878</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="collision_ground_6">
+        <pose>2.83306 0.079873 4.58439 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.001 5.1333 9.16878</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="collision_ground_7">
+        <pose>0 0.079873 8.72854 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>6.95991 5.1333 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual_chainlink">
+        <geometry>
+          <mesh>
+            <uri>model://Tunnel Tile 7/meshes/Tunnel Tile 7.dae</uri>
+            <submesh>
+              <name>Chainlink</name>
+              <center>false</center>
+            </submesh>
+            <scale>1.005 1.005 1.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <script>
+              <uri>model://Tunnel Tile 7/materials/scripts</uri>
+              <uri>model://Tunnel Tile 7/materials/textures</uri>
+              <name>TunnelTile/Chainlink_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="visual_ground">
+        <geometry>
+          <mesh>
+            <uri>model://Tunnel Tile 7/meshes/Tunnel Tile 7.dae</uri>
+            <submesh>
+              <name>Ground</name>
+              <center>false</center>
+            </submesh>
+            <scale>1.005 1.005 1.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <script>
+              <uri>model://Tunnel Tile 7/materials/scripts</uri>
+              <uri>model://Tunnel Tile 7/materials/textures</uri>
+              <name>TunnelTile/Ground_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="visual_wood">
+        <geometry>
+          <mesh>
+            <uri>model://Tunnel Tile 7/meshes/Tunnel Tile 7.dae</uri>
+            <submesh>
+              <name>Wood</name>
+              <center>false</center>
+            </submesh>
+            <scale>1.005 1.005 1.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <script>
+              <uri>model://Tunnel Tile 7/materials/scripts</uri>
+              <uri>model://Tunnel Tile 7/materials/textures</uri>
+              <name>TunnelTile/Wood_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="visual_walls">
+        <geometry>
+          <mesh>
+            <uri>model://Tunnel Tile 7/meshes/Tunnel Tile 7.dae</uri>
+            <submesh>
+              <name>Walls</name>
+              <center>false</center>
+            </submesh>
+            <scale>1.005 1.005 1.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <script>
+              <uri>model://Tunnel Tile 7/materials/scripts</uri>
+              <uri>model://Tunnel Tile 7/materials/textures</uri>
+              <name>TunnelTile/Walls_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="visual_lights">
+        <geometry>
+          <mesh>
+            <uri>model://Tunnel Tile 7/meshes/Tunnel Tile 7.dae</uri>
+            <submesh>
+              <name>Lights</name>
+              <center>false</center>
+            </submesh>
+            <scale>1.005 1.005 1.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <script>
+              <uri>model://Tunnel Tile 7/materials/scripts</uri>
+              <uri>model://Tunnel Tile 7/materials/textures</uri>
+              <name>TunnelTile/Light_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

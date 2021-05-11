@@ -1,0 +1,588 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <plugin name='ros_interface_plugin' filename='librotors_gazebo_ros_interface_plugin.so'/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>47.3667</latitude_deg>
+      <longitude_deg>8.55</longitude_deg>
+      <elevation>500</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <physics name='default_physics' default='0' type='ode'>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>1000</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+    </physics>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <state world_name='default'>
+      <sim_time>1758 900000000</sim_time>
+      <real_time>47 376008810</real_time>
+      <wall_time>1616693535 372731621</wall_time>
+      <iterations>3517</iterations>
+      <model name='grey_wall'>
+        <pose frame=''>12.5465 0.695245 0 0 -0 1.44867</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>12.5465 0.695245 1.4 0 -0 1.44867</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='subt_tunnel_staging_area'>
+        <pose frame=''>2.33717 0.089024 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>2.33717 0.089024 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-13.1189 0.647302 14.0447 0 0.501797 -0.044835</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='subt_tunnel_staging_area'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision1'>
+          <pose frame=''>-10 -10 20 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision2'>
+          <pose frame=''>10 10 20 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='plane_visual'>
+          <pose frame=''>-1.18172 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Asphalt_Plane.DAE</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_right1'>
+          <pose frame=''>8.81828 -12.4 0 1.5707 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_right2'>
+          <pose frame=''>3.81828 -12.4 0 1.5707 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_right3'>
+          <pose frame=''>-1.18172 -12.4 0 1.5707 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_right4'>
+          <pose frame=''>-6.18172 -12.4 0 1.5707 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_right5'>
+          <pose frame=''>-11.1817 -12.4 0 1.5707 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_left1'>
+          <pose frame=''>8.81828 12.4 0 1.5707 -0 3.1415</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_left2'>
+          <pose frame=''>3.81828 12.4 0 1.5707 -0 3.1415</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_left3'>
+          <pose frame=''>-1.18172 12.4 0 1.5707 -0 3.1415</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_left4'>
+          <pose frame=''>-6.18172 12.4 0 1.5707 -0 3.1415</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_left5'>
+          <pose frame=''>-11.1817 12.4 0 1.5707 -0 3.1415</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_front_left1'>
+          <pose frame=''>11.3182 10 0 1.5707 0 1.5707</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_front_left2'>
+          <pose frame=''>11.3182 7 0 1.5707 0 1.5707</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_front_right1'>
+          <pose frame=''>11.3182 -10 0 1.5707 0 1.5707</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_front_right2'>
+          <pose frame=''>11.3182 -7 0 1.5707 0 1.5707</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1 6.7 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='fence_front_top'>
+          <pose frame=''>11.3182 0 4.5 1.5707 0 1.5707</pose>
+          <geometry>
+            <mesh>
+              <uri>model://subt_tunnel_staging_area/meshes/Fence.dae</uri>
+              <scale>1.8 5.17 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='ceiling_collision'>
+          <pose frame=''>-1.18172 0 20.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>25 25 1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='right_collision'>
+          <pose frame=''>-1.18172 -13 10.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>25 1 21</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='left_collision'>
+          <pose frame=''>-1.18172 13 10.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>25 1 21</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='rear_collision'>
+          <pose frame=''>-13.6182 0 10.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1 25 21</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='front_left_collision'>
+          <pose frame=''>11.3182 8.75 10.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1 9.5 21</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='front_right_collision'>
+          <pose frame=''>11.3182 -8.75 10.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1 9.5 21</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='front_top_collision'>
+          <pose frame=''>11.3182 0 12.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1 8 15</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='plane_collision'>
+          <pose frame=''>-1.18172 0 -0.502 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>25 25 1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='collision'>
+          <pose frame=''>10 0 -0.001 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>0.93 0.93 0.93</scale>
+              <uri>model://subt_tunnel_staging_area/meshes/Entrance.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>10 0 -0.001 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>0.93 0.93 0.93</scale>
+              <uri>model://subt_tunnel_staging_area/meshes/Entrance.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>2.33717 0.089024 0 0 -0 0</pose>
+    </model>
+    <model name='grey_wall'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 1.4 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>14.4239 0.131984 0 0 -0 0</pose>
+    </model>
+  </world>
+</sdf>

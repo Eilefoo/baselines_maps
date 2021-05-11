@@ -1,0 +1,13 @@
+material TunnelTile/ConstrainedWall_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture ConstrainedWall_Albedo.jpg
+      }
+    }
+  }
+}

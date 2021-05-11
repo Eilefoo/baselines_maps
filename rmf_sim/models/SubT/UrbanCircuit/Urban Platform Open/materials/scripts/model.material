@@ -1,0 +1,369 @@
+material UrbanTile/BrickWall_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture BrickWall_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Trim_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Trim_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/PaintGreen_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture PaintGreen_Albedo.png
+      }
+    }
+  }
+}
+
+
+
+material UrbanTile/Floor_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Floor_Albedo.jpg
+      }
+    }
+  }
+}
+
+material UrbanTile/TileFloorWorn_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture TileFloorWorn_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Floor_NoSlip_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Floor_NoSlip_Albedo.png
+      }
+    }
+  }
+}
+
+
+
+material UrbanTile/MetalBrushed_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture MetalBrushed_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/ConcreteTiles_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture ConcreteTiles_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Concrete_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Concrete_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Wall_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Wall_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Stairs_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Stairs_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Concrete_Tunnel_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Concrete_Tunnel_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Shaft_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Shaft_Albedo.png
+      }
+    }
+  }
+}
+
+
+material UrbanTile/Railing_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Railing.png
+      }
+    }
+  }
+}
+
+material UrbanTile/PaintedMetal_Blue_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture PaintedMetal_Blue_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/AprilTag_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture AprilTags.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Rail_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Rail_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/ThirdRail_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture ThirdRail_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/PaintedMetal_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture PaintedMetal_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/TubeLight_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture TubeLight_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Lights_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Lights_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Roof_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Roof_Albedo.png
+      }
+    }
+  }
+}
+
+
+material UrbanTile/RoofLights_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture RoofLights_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Signs_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Signs_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Bench_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Bench_Albedo.png
+      }
+    }
+  }
+}
+
+material UrbanTile/Trashcan_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Trashcan_Albedo.png
+      }
+    }
+  }
+}
